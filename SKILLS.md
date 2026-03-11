@@ -1,6 +1,6 @@
 # Oracle DB Skills
 
-102 Oracle Database reference guides for AI agents. Each file is a standalone skill covering one topic with examples, best practices, and common mistakes.
+103 Oracle Database reference guides for AI agents. Each file is a standalone skill covering one topic with examples, best practices, and common mistakes.
 
 **Install:** `npx skills add krisrice/oracle-db-skills`
 
@@ -32,6 +32,7 @@
 | `skills/appdev/xml-in-oracle.md` | appdev | XMLType storage, XQuery, XMLTable, XML indexes, XMLDB repository |
 | `skills/appdev/spatial-data.md` | appdev | SDO_GEOMETRY, spatial indexes, SDO_RELATE, coordinate systems |
 | `skills/appdev/oracle-text.md` | appdev | CONTEXT/CTXCAT indexes, CONTAINS, fuzzy/stemming, HIGHLIGHT/SNIPPET |
+| `skills/appdev/sql-property-graph.md` | appdev | SQL Property Graph DDL, GRAPH_TABLE operator, MATCH patterns, quantified paths (23ai+) |
 | `skills/security/privilege-management.md` | security | Least privilege, roles, DBMS_PRIVILEGE_CAPTURE, avoiding PUBLIC grants |
 | `skills/security/row-level-security.md` | security | VPD/FGAC, DBMS_RLS, application contexts, all policy types |
 | `skills/security/data-masking.md` | security | Oracle Data Redaction (DBMS_REDACT), full/partial/regexp/random redaction |

@@ -39,6 +39,7 @@ A tracking file for skills.md topics to create for working with Oracle DB.
 - [x] `xml-in-oracle.md` — XMLType, XQuery, XML indexes
 - [x] `spatial-data.md` — SDO_GEOMETRY, spatial indexes, query patterns
 - [x] `oracle-text.md` — Full-text search, CONTEXT indexes, CONTAINS queries
+- [x] `sql-property-graph.md` — SQL Property Graph DDL, GRAPH_TABLE, MATCH patterns, quantified paths (23ai+)
 
 ## Security
 - [x] `privilege-management.md` — Least privilege, roles, system vs object privileges
