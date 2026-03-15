@@ -1,6 +1,6 @@
 # Oracle DB Skills
 
-128 Oracle Database and OCR container reference guides for AI agents. Each file is a standalone skill covering one topic with examples, best practices, and common mistakes.
+129 Oracle Database and OCR container reference guides for AI agents. Each file is a standalone skill covering one topic with examples, best practices, and common mistakes.
 
 **Install:** `npx skills add krisrice/oracle-db-skills`
 
@@ -12,6 +12,7 @@
 | `skills/design/data-modeling.md` | design | Logical vs physical modeling, star/snowflake schemas, ODS, SCD types |
 | `skills/design/partitioning-strategy.md` | design | Range, list, hash, composite partitioning, partition pruning, local vs global indexes |
 | `skills/design/tablespace-design.md` | design | Sizing, bigfile vs smallfile, ASSM vs MSSM, production layout patterns |
+| `skills/design/schema-analysis-rules.md` | design | Schema analysis rules: reverse-engineering, issue detection, logical/physical model improvements |
 | `skills/sql-dev/sql-best-practices.md` | sql-dev | Set-based SQL, bind variables, joins, row limiting, data types, virtual columns |
 | `skills/sql-dev/sql-tuning.md` | sql-dev | Execution plans, optimizer hints, SQL profiles, plan baselines |
 | `skills/sql-dev/sql-injection-avoidance.md` | sql-dev | Bind variables, DBMS_ASSERT, safe dynamic SQL patterns |

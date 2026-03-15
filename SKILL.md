@@ -1,11 +1,11 @@
 ---
 name: oracle-db-skills
-description: 128 Oracle Database and OCR container reference guides covering SQL, PL/SQL, performance tuning, security, ORDS, SQLcl, container images, migrations, and more. Load individual skill files on demand for expert guidance on any Oracle topic.
+description: 129 Oracle Database and OCR container reference guides covering SQL, PL/SQL, performance tuning, security, ORDS, SQLcl, container images, migrations, and more. Load individual skill files on demand for expert guidance on any Oracle topic.
 ---
 
 # Oracle DB Skills
 
-A collection of 128 standalone reference guides for Oracle Database and OCR database-category container images. Each file covers one topic with explanations, practical examples, best practices, and common mistakes.
+A collection of 129 standalone reference guides for Oracle Database and OCR database-category container images. Each file covers one topic with explanations, practical examples, best practices, and common mistakes.
 
 ## How to Use
 
@@ -20,7 +20,7 @@ A collection of 128 standalone reference guides for Oracle Database and OCR data
 | Backup, recovery, RMAN, redo/undo logs, users | `skills/admin/` |
 | JDBC, connection pooling, JSON, XML, spatial, full-text, transactions, property graphs | `skills/appdev/` |
 | RAC, CDB/PDB, Exadata, In-Memory, OCI, ATP/ADW, Data Guard | `skills/architecture/` |
-| ERD, data modeling, partitioning, tablespaces | `skills/design/` |
+| ERD, data modeling, partitioning, tablespaces, schema analysis | `skills/design/` |
 | Liquibase, Flyway, online operations, EBR, utPLSQL, git for SQL | `skills/devops/` |
 | Advanced Queuing, DBMS_SCHEDULER, materialized views, DBLinks, APEX | `skills/features/` |
 | Migrating from PostgreSQL, MySQL, SQL Server, MongoDB, etc. | `skills/migrations/` |

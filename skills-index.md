@@ -13,6 +13,7 @@ A tracking file for skills.md topics to create for working with Oracle DB.
 - [x] `data-modeling.md` — Logical vs physical modeling, star/snowflake schemas
 - [x] `partitioning-strategy.md` — Range, list, hash, composite partitioning
 - [x] `tablespace-design.md` — Sizing, storage layout, bigfile vs smallfile
+- [x] `schema-analysis-rules.md` — Schema analysis rules: reverse-engineering, issue detection, logical/physical model improvements
 
 ## SQL Development
 - [x] `sql-best-practices.md` — Set-based SQL, bind variables, joins, row limiting, data types, virtual columns

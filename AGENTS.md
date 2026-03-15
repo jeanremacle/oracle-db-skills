@@ -1,6 +1,6 @@
 # Oracle DB Skills — Agent Instructions
 
-This repository is a collection of 128 standalone reference guides for Oracle Database and Oracle Container Registry database-category images. Each file covers one topic with explanations, practical examples, best practices, and common mistakes.
+This repository is a collection of 129 standalone reference guides for Oracle Database and Oracle Container Registry database-category images. Each file covers one topic with explanations, practical examples, best practices, and common mistakes.
 
 ## How to Use This Collection
 
@@ -36,7 +36,7 @@ skills/
 | Backup, recovery, RMAN, redo/undo logs, users | `skills/admin/` |
 | JDBC, connection pooling, JSON, XML, spatial, full-text, transactions, property graphs | `skills/appdev/` |
 | RAC, CDB/PDB, Exadata, In-Memory, OCI, ATP/ADW, Data Guard | `skills/architecture/` |
-| ERD, data modeling, partitioning, tablespaces | `skills/design/` |
+| ERD, data modeling, partitioning, tablespaces, schema analysis | `skills/design/` |
 | Liquibase, Flyway, online operations, EBR, utPLSQL, git for SQL | `skills/devops/` |
 | Advanced Queuing, DBMS_SCHEDULER, materialized views, DBLinks, APEX | `skills/features/` |
 | Migrating from PostgreSQL, MySQL, SQL Server, MongoDB, etc. | `skills/migrations/` |
