@@ -63,6 +63,7 @@ db/
 - `db/migrations/migration-assessment.md`
 - `db/performance/explain-plan.md`
 - `db/plsql/plsql-package-design.md`
+- `db/appdev/java-oracle-jdbc.md`
 - `db/devops/schema-migrations.md`
 - `db/agent/schema-discovery.md`
 - `db/containers/container-selection-matrix.md`
@@ -74,5 +75,6 @@ db/
 | Diagnose a slow query | `explain-plan` → `wait-events` → `optimizer-stats` → `awr-reports` |
 | Plan a migration | `migration-assessment` → `oracle-migration-tools` → source-specific `migrate-*.md` → `migration-cutover-strategy` |
 | Build RAG on Oracle Database | `ai-profiles` → `vector-search` → `dbms-vector` |
+| Build a Java JDBC service | `java-oracle-jdbc` → `java-oracle-jdbc/dependencies` → `java-oracle-jdbc/connections` → `java-oracle-jdbc/sql` → `java-oracle-jdbc/pooling-production` |
 | Perform agent-safe schema change | `schema-discovery` → `destructive-op-guards` → `idempotency-patterns` → `schema-migrations` |
 | Set up AI-driven database access via MCP | `sqlcl-basics` (save connections) → `security/privilege-management` (least-privilege user) → `sqlcl-mcp-server` (configure + start) |
