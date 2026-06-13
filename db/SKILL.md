@@ -46,7 +46,7 @@ db/
 | RAC, Multitenant, Exadata, In-Memory, OCI database services, Data Guard architecture | `db/architecture/` |
 | Backup, recovery, RMAN, Autonomous Recovery Service, Cloud Protect | `db/backup-recovery/` |
 | OCR database-category container images and pull guidance | `db/containers/` |
-| ERD, data modeling, partitioning, tablespaces | `db/design/` |
+| ERD, data modeling, partitioning, tablespaces, schema analysis | `db/design/` |
 | Schema migrations, online operations, edition-based redefinition, testing, version control | `db/devops/` |
 | AQ, DBMS_SCHEDULER, materialized views, DBLinks, APEX, vector search, SELECT AI | `db/features/` |
 | SQLAlchemy, Django, Pandas, Spring JPA, MyBatis, TypeORM, Sequelize, Dapper, GORM | `db/frameworks/` |
