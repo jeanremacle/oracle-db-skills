@@ -35,8 +35,11 @@ SELECT t.table_name AS junction_table,
        COUNT(DISTINCT cc.constraint_name) AS fk_count
 FROM   dba_constraints t
 JOIN   dba_cons_columns tc ON t.constraint_name = tc.constraint_name AND t.owner = tc.owner
-JOIN   dba_cons_columns cc ON tc.column_name = cc.column_name AND tc.owner = cc.owner
+JOIN   dba_cons_columns cc ON tc.owner = cc.owner
+                          AND tc.table_name = cc.table_name
+                          AND tc.column_name = cc.column_name
 JOIN   dba_constraints fc ON cc.constraint_name = fc.constraint_name AND cc.owner = fc.owner
+                          AND fc.table_name = t.table_name
 WHERE  t.constraint_type = 'P'
 AND    fc.constraint_type = 'R'
 AND    t.owner = :schema_name
@@ -428,10 +431,10 @@ FROM   dba_tab_columns
 WHERE  owner = :schema_name
 AND    data_type = 'VARCHAR2'
 AND    data_length >= 200
-AND    UPPER(column_name) LIKE '%LIST%'
-   OR  UPPER(column_name) LIKE '%TAGS%'
-   OR  UPPER(column_name) LIKE '%MEMBERS%'
-   OR  UPPER(column_name) LIKE '%IDS%'
+AND    (   UPPER(column_name) LIKE '%LIST%'
+        OR UPPER(column_name) LIKE '%TAGS%'
+        OR UPPER(column_name) LIKE '%MEMBERS%'
+        OR UPPER(column_name) LIKE '%IDS%')
 ORDER  BY table_name, column_name;
 ```
 
@@ -737,11 +740,10 @@ EXEC DBMS_STATS.GATHER_SCHEMA_STATS(
 ### 5.4 Row-Level Triggers on Large Fact Tables
 
 ```sql
-SELECT t.table_name, tr.trigger_name, tr.trigger_type,
+SELECT tr.table_name, tr.trigger_name, tr.trigger_type,
        tab.num_rows
 FROM   dba_triggers tr
 JOIN   dba_tables tab ON tr.owner = tab.owner AND tr.table_name = tab.table_name
-CROSS  JOIN LATERAL (SELECT tr.table_name FROM DUAL) t
 WHERE  tr.owner = :schema_name
 AND    tr.trigger_type LIKE '%EACH ROW%'
 AND    tab.num_rows > 10000000
@@ -793,15 +795,15 @@ Run these steps in order for a full schema health check:
 
 This skill consolidates rules from the following skill files in this repository:
 
-- [skills/design/erd-design.md](erd-design.md) — Entity design, normalization, naming conventions, constraint rules
-- [skills/design/data-modeling.md](data-modeling.md) — Logical/physical modeling, star/snowflake schemas, SCD, compression, PCTFREE
-- [skills/design/partitioning-strategy.md](partitioning-strategy.md) — Partitioning types, pruning, local vs global indexes
-- [skills/design/tablespace-design.md](tablespace-design.md) — Tablespace layout, ASSM vs MSSM, sizing, autoextend
-- [skills/performance/index-strategy.md](../performance/index-strategy.md) — B-tree vs bitmap, FK indexes, unused index detection
-- [skills/performance/optimizer-stats.md](../performance/optimizer-stats.md) — Statistics gathering, staleness, histograms
-- [skills/architecture/exadata-features.md](../architecture/exadata-features.md) — HCC compression requirements
-- [skills/plsql/plsql-package-design.md](../plsql/plsql-package-design.md) — Package design anti-patterns
-- [skills/sql-dev/sql-best-practices.md](../sql-dev/sql-best-practices.md) — Implicit type conversions, bind variables
+- [db/design/erd-design.md](erd-design.md) — Entity design, normalization, naming conventions, constraint rules
+- [db/design/data-modeling.md](data-modeling.md) — Logical/physical modeling, star/snowflake schemas, SCD, compression, PCTFREE
+- [db/design/partitioning-strategy.md](partitioning-strategy.md) — Partitioning types, pruning, local vs global indexes
+- [db/design/tablespace-design.md](tablespace-design.md) — Tablespace layout, ASSM vs MSSM, sizing, autoextend
+- [db/performance/index-strategy.md](../performance/index-strategy.md) — B-tree vs bitmap, FK indexes, unused index detection
+- [db/performance/optimizer-stats.md](../performance/optimizer-stats.md) — Statistics gathering, staleness, histograms
+- [db/architecture/exadata-features.md](../architecture/exadata-features.md) — HCC compression requirements
+- [db/plsql/plsql-package-design.md](../plsql/plsql-package-design.md) — Package design anti-patterns
+- [db/sql-dev/sql-best-practices.md](../sql-dev/sql-best-practices.md) — Implicit type conversions, bind variables
 
 Official Oracle documentation:
 - [Oracle Database 23ai Database Reference — Static Data Dictionary Views](https://docs.oracle.com/en/database/oracle/oracle-database/23/refrn/static-data-dictionary-views.html)
